@@ -9,8 +9,7 @@ public class SpringApplication {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
-		Music bean = context.getBean("musicRockBean",Music.class);
-		MusicPlayer musicPlayer = new MusicPlayer(bean);
+		MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
 		System.out.println(musicPlayer.playMusic());
 
 		context.close();
