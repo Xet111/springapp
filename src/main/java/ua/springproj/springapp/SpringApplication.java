@@ -9,10 +9,9 @@ public class SpringApplication {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
-		TestBean testBean = context.getBean("testBean",TestBean.class);
-		System.out.println(testBean.getName());
-		testBean.setName("Nikita");
-		System.out.println(testBean.getName());
+		Music bean = context.getBean("musicRockBean",Music.class);
+		MusicPlayer musicPlayer = new MusicPlayer(bean);
+		System.out.println(musicPlayer.playMusic());
 
 		context.close();
 	}

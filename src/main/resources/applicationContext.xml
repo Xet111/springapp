@@ -7,9 +7,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ua.springproj.springapp.TestBean">
-        <constructor-arg value="Xet"/>
+    <bean id="musicClassicBean"
+          class="ua.springproj.springapp.ClassicalMusic">
     </bean>
+    <bean id="musicRockBean"
+          class="ua.springproj.springapp.RockMusic"></bean>
 
 </beans>
