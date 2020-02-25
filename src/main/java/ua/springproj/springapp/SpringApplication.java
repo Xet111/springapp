@@ -11,8 +11,10 @@ public class SpringApplication {
 				"applicationContext.xml");
 		TestBean testBean = context.getBean("testBean",TestBean.class);
 		System.out.println(testBean.getName());
+		testBean.setName("Nikita");
+		System.out.println(testBean.getName());
+
 		context.close();
 	}
-
 
 }
